@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemScriptableObject : MonoBehaviour
+namespace ScriptableObjects
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(menuName = "Scriptable Objects/Item", fileName = "ItemScriptableObject")]
+    public class ItemScriptableObject : ScriptableObject
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public Texture texture;
+        public int maxStackSize;
+        public string id;
     }
 }
